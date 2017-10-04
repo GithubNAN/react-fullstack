@@ -11,7 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "scp ./!(node_modules/) root@188.166.236.200:/root/project/server/",
     "develop": "node index.js",
-    "dev": "nodemon index"
+    "dev": "nodemon index",
+    "production": "NODE_ENV=production node index.js"
   },
   "keywords": [],
   "author": "",
