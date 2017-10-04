@@ -12,7 +12,7 @@
     "deploy": "scp ./!(node_modules/) root@188.166.236.200:/root/project/server/",
     "develop": "node index.js",
     "dev": "nodemon index",
-    "production": "NODE_ENV=production node index.js"
+    "production": "NODE_ENV=production PORT=80 node index.js"
   },
   "keywords": [],
   "author": "",
