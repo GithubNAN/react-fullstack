@@ -11,20 +11,26 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "scp ./!(node_modules/) root@188.166.236.200:/root/project/server/",
     "develop": "node index.js",
-    "dev": "nodemon index",
-    "production": "NODE_ENV=production PORT=80 node index.js"
+    "production": "NODE_ENV=production PORT=80 node index.js",
+    "server": "nodemon index",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "cookie-session": "^1.3.2",
     "express": "^4.16.1",
     "mongoose": "^4.12.0",
     "passport": "^0.4.0",
-    "passport-google-oauth20": "^1.0.0"
+    "passport-google-oauth20": "^1.0.0",
+    "react-stripe-checkout": "^2.6.3",
+    "stripe": "^5.1.1"
   },
   "devDependencies": {
+    "concurrently": "^3.5.0",
     "nodemon": "^1.12.1"
   }
 }
